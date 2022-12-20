@@ -7,6 +7,7 @@ public class Randoms implements Iterable<Integer> {
     private int min;
     private int max;
 
+
     public Randoms(int min, int max) {
         this.min = min;
         this.max = max;
@@ -14,10 +15,10 @@ public class Randoms implements Iterable<Integer> {
 
     @Override
     public Iterator<Integer> iterator() {
-        return new MyIterator();
+        return new MySuperPuperIterator();
     }
 
-    public class MyIterator implements Iterator {
+    public class MySuperPuperIterator implements Iterator {
 
         @Override
         public boolean hasNext() {
@@ -26,8 +27,7 @@ public class Randoms implements Iterable<Integer> {
 
         @Override
         public Integer next() {
-            int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
-            return randomNum;
+            return ThreadLocalRandom.current().nextInt(min, max + 1);
         }
     }
 }
