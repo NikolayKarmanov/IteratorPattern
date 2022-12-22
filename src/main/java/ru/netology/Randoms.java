@@ -1,20 +1,14 @@
 package ru.netology;
 
 import java.util.Iterator;
-import java.util.concurrent.ThreadLocalRandom;
 
-public class Randoms implements Iterable<Integer> {
-    private int min;
-    private int max;
+public class Randoms implements Iterable<String> {
 
-
-    public Randoms(int min, int max) {
-        this.min = min;
-        this.max = max;
+    public Randoms() {
     }
 
     @Override
-    public Iterator<Integer> iterator() {
+    public Iterator<String> iterator() {
         return new MySuperPuperIterator();
     }
 
@@ -26,8 +20,8 @@ public class Randoms implements Iterable<Integer> {
         }
 
         @Override
-        public Integer next() {
-            return ThreadLocalRandom.current().nextInt(min, max + 1);
+        public String next() {
+            return new Person().toString();
         }
     }
 }

@@ -2,12 +2,14 @@ package ru.netology;
 
 public class Main {
     public static void main(String[] args) {
-        for (int r : new Randoms(90, 100)) {
-            System.out.println("Случайное число: " + r);
-            if (r == 100) {
-                System.out.println("Выпало число 100, давайте на этом закончим");
+        int count = 0;
+        for (String r : new Randoms()) {
+            System.out.println(r);
+            count++;
+            if (r.equals("Ivan Ivanov 30 years")) {
                 break;
             }
         }
+        System.out.println("Ivan Ivanov 30 years was found in " + count + " steps");
     }
 }
