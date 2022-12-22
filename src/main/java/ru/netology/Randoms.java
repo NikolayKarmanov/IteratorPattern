@@ -1,6 +1,7 @@
 package ru.netology;
 
 import java.util.Iterator;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Randoms implements Iterable<Integer> {
@@ -27,7 +28,7 @@ public class Randoms implements Iterable<Integer> {
 
         @Override
         public Integer next() {
-            return ThreadLocalRandom.current().nextInt(min, max + 1);
+            return new Random().nextInt(max - min + 1) + min;
         }
     }
 }
